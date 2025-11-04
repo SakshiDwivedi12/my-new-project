@@ -1,0 +1,17 @@
+##function
+def is_strong_password(password):
+    if len(password)<8:
+        return(false)
+        if not any(char.isdigit()for char in password):
+            return(false)
+        if not any(char.islower()for char in password):
+            return(false)
+        if not any (char.isupper()for char in password):
+            return (false)
+        if not any (char in '!@#$%&*()_+'for char in password):
+            return(false)
+        return(True)
+    
+    ##calling the function
+    print(is_strong_password("hgujjk"))
+    print(is_strong_password("strongpwd!"))
